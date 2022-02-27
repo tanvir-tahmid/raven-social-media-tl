@@ -13,7 +13,7 @@ app.set("view engine", "pug");
 app.set("views", "views");
 
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(express.static(path.join(__dirname, "public")))
+app.use(express.static(path.join(__dirname, "/public")))
 
 app.use(session({
     secret: "secret",
@@ -31,7 +31,8 @@ app.use("/register", registerRoute);
 app.get("/", middleware.requireLogin, (req, res, next) => {
 
     var payload = {
-        pageTitle: "Home"
+        pageTitle: "Home",
+        userLoggedIn: req.session.user
     }
 
     res.status(200).render("home", payload);
