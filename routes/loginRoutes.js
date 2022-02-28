@@ -41,7 +41,7 @@ router.post("/", async (req, res, next) => {
             }
         }
 
-        payload.errorMessage = "Incorrect Login Credentials. Please check, and try again";
+        payload.errorMessage = "Login credentials incorrect.";
         return res.status(200).render("login", payload);
     }
 
