@@ -200,3 +200,31 @@ button span {
 .postButtonContainer.red button.active {
     color: var(--red);
 }
+
+.postActionContainer {
+    padding-left: 35px;
+    font-size: 13px;
+    color: var(--greyText);
+    margin-bottom: 5px;
+}
+
+.replyFlag {
+    margin-bottom: 5px;
+}
+
+.replyFlag a {
+    color: var(--blue);
+}
+
+.post.largeFont .postBody,
+.post.largeFont .postFooter {
+    font-size: 23px;
+}
+
+.postContentContainer .header {
+    display: flex;
+}
+
+.postContentContainer .header .date {
+    flex: 1;
+}
